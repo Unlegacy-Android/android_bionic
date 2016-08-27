@@ -99,6 +99,12 @@ cc_binary {
         "-Werror",
     ],
 
+    product_variables: {
+        needs_platform_textrels: {
+            cppflags: ["-DALLOW_PLATFORM_TEXTRELS"],
+        },
+    },
+
     cppflags: ["-Wold-style-cast"],
 
     // we are going to link libc++_static manually because
