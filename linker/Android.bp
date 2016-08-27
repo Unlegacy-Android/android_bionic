@@ -166,6 +166,9 @@ cc_binary {
         debuggable: {
             cppflags: ["-DUSE_LD_CONFIG_FILE"],
         },
+        needs_platform_textrels: {
+            cppflags: ["-DALLOW_PLATFORM_TEXTRELS"],
+        },
     },
 
     cppflags: ["-Wold-style-cast"],
